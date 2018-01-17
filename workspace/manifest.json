@@ -1,0 +1,28 @@
+{
+  "manifest_version": 2,
+  "name": "jenkins-login-ui-generalizer",
+  "description": "UI generalizer for Jenkins login page.",
+  "version": "1.0.0",
+  "icons": {
+    "16": "assets/images/headshot.jpg"
+  },
+  "background": {
+    "scripts": [
+      "assets/scripts/jenkinsLoginUiGeneralizer__background.js"
+    ],
+    "persistent": false
+  },
+  "browser_action": {
+    "default_icon": {
+      "19": "assets/images/headshot.jpg"
+    },
+    "default_title": "jenkins-login-ui-generalizer"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["assets/scripts/jenkinsLoginUiGeneralizer__content.js"]
+    }
+  ],
+  "permissions": ["activeTab"]
+}
